@@ -1,11 +1,9 @@
 package Pages.MyAccount;
 
-import Settings.ChromeSettings;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
 
 public class MyProfile {
     protected WebDriver driver;
@@ -50,9 +48,8 @@ public class MyProfile {
         System.out.println("-ввел отчество");
     }
     public void selectCity() {
-        WebElement listText = driver.findElement(By.xpath("//DIV[@id = 'cuedselFrame-cityFieldCombobox']"));
-        Select select = new Select(listText);
-        select.selectByVisibleText("Уфа");
+        driver.findElement(By.xpath("//div[@class='cuedsel']//input[@type='text']")).click();
+        driver.findElement(By.xpath("//div[@class='cuedsel-scroll-pane']//span[contains(text(), 'Уфа')]"));
         System.out.println("-Выбрал город Уфа");
     }
     public void saveChanges() {

@@ -45,7 +45,7 @@ public class MyCabinetTests extends ChromeSettings{
         addressB.assertMyAddress();
         addressB.addAddress();
         addressB.deleteAddress();
-        System.out.println("Test Succesful");
+        System.out.println("Test Successful");
     }
     @Test
     public void subscriptions() {

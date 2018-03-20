@@ -27,6 +27,11 @@ public class ChromeSettings {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
+    public Select getSelect(WebElement element) {
+        Select select = new Select(element);
+        return select;
+    }
+
     @After
     public void setDown()   {
         driver.quit();
