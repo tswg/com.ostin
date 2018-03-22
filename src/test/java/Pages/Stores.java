@@ -19,7 +19,7 @@ public class Stores extends MyCabinetTests {
     By countrySelectLocator = By.xpath("//SELECT[@id = 'country']");
     By citySelectLocator = By.xpath("//SELECT[@id = 'city']");
     By assertFormatLocator = By.xpath("//DIV[@class = 'scoresResult scoresPage']/DIV[child::SPAN[contains(text(), 'Формат')]]/text()[1]");
-    By assertAddressLocator = By.xpath("//DIV[@class = 'scoresResult scoresPage']/DIV[child::SPAN[contains(text(), 'Адрес')]]/text()[1]");
+    By assertAddressLocator = By.xpath("//DIV[@class = 'scoresResult scoresPage']/DIV[8]/text()[1]");
 
     public void assertStoresAddress() {
         driver.findElement(storesAddressLocator).click();
