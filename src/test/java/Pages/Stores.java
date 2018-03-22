@@ -18,8 +18,8 @@ public class Stores extends MyCabinetTests {
     By formatSelectLocator = By.xpath("//select[@id='format']");
     By countrySelectLocator = By.xpath("//SELECT[@id = 'country']");
     By citySelectLocator = By.xpath("//SELECT[@id = 'city']");
-    By assertFormatLocator = By.xpath("//DIV[@class = 'scoresResult scoresPage']/DIV[child::SPAN[contains(text(), 'Формат')]]/text()[1]");
-    By assertAddressLocator = By.xpath("//DIV[@class = 'scoresResult scoresPage']/DIV[8]/text()[1]");
+    By assertFormatLocator = By.xpath("//div[@class='scoresResult scoresPage']//span[text()='Формат']/ancestor::*[1]");
+    By assertAddressLocator = By.xpath("//div[@class='scoresResult scoresPage']//span[text()='Адрес']/ancestor::*[1]");
 
     public void assertStoresAddress() {
         driver.findElement(storesAddressLocator).click();
@@ -42,9 +42,9 @@ public class Stores extends MyCabinetTests {
         System.out.println("-Выбрал город");
     }
     public void assertChoose() {
-        Assert.assertEquals("wrong", driver.findElement(assertFormatLocator).getText(), "O'STIN Дисконт");
+        Assert.assertEquals("wrong", driver.findElement(assertFormatLocator).getText(), "Формат\nO'STIN Дисконт");
         System.out.println("-проверил формат магазина");
-        Assert.assertEquals("wrong", driver.findElement(assertAddressLocator).getText(), "г. Уфа, ул. Менделеева, д.137, ТЦ \"Иремель\"");
+        Assert.assertEquals("wrong", driver.findElement(assertAddressLocator).getText(), "Адрес\nг. Уфа, ул. Менделеева, д.137, ТЦ \"Иремель\"");
         System.out.println("-проверил адрес магазина");
     }
 }
