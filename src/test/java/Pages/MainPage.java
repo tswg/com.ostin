@@ -21,6 +21,8 @@ public class MainPage {
     By assertLoginNameLocator = By.xpath("//span[contains(text(), 'Николай')]");
     By invalidLoginOrPasswordLocator = By.xpath("//form//div[contains(text(), 'Неверный логин или пароль')]");
     By myCabinetLocator = By.xpath("//A[@id = 'privateCabinet']");
+    By searchButtonLocator = By.xpath("//A[@class = 'new_ostin_head__search-icon']");
+    By searchLineLocator = By.xpath("//INPUT[@id = 'atg_store_searchInput']");
 
 
 
@@ -65,5 +67,15 @@ public class MainPage {
     public void clickCabinet() {
         driver.findElement(myCabinetLocator).click();
         System.out.println("кликнул кнопку личный кабинет");
+    }
+    public void clickSearchButton() {
+        driver.findElement(searchButtonLocator).click();
+        System.out.println("-кликнул кнопку Поиск");
+    }
+    public void searchLine(String searchElement)    {
+        WebElement search = driver.findElement(searchLineLocator);
+        search.click();
+        search.clear();
+        search.sendKeys(searchElement);
     }
 }

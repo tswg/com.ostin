@@ -9,4 +9,5 @@ public class Search {
     public Search(WebDriver driver) {
         this.driver = driver;
     }
+
 }

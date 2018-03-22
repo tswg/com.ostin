@@ -17,6 +17,7 @@ public class ChromeSettings {
     protected String incorrectLogin = "vovapupkin@gmail.com";
     protected String incorrectpasswd = "VovaPupkinStyle1";
     protected String wrongSymbols = "@#$%^&*((*&^%$#@#$%^&*";
+    protected String searchElement1 = "Базовая футболка";
 
     @Before
     public void setUp() {
