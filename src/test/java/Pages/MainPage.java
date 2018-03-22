@@ -23,6 +23,7 @@ public class MainPage {
     By myCabinetLocator = By.xpath("//A[@id = 'privateCabinet']");
     By searchButtonLocator = By.xpath("//A[@class = 'new_ostin_head__search-icon']");
     By searchLineLocator = By.xpath("//INPUT[@id = 'atg_store_searchInput']");
+    By searchBasicShirtLocator = By.xpath("//LI[1]/A[child::SPAN[contains(text(), 'базовая футболка')]]");
 
 
 
@@ -77,5 +78,7 @@ public class MainPage {
         search.click();
         search.clear();
         search.sendKeys(searchElement);
+        driver.findElement(searchBasicShirtLocator).click();
+        System.out.println("-нашел в строке поиска Базовую футболку для мужчин");
     }
 }
