@@ -11,7 +11,7 @@ public class Search {
     public Search(WebDriver driver) {
         this.driver = driver;
     }
-    By basicShirtLocator = By.xpath("//A[@href = '/ru/ru/catalog/mujskaya_odejda/mujskie_futbolki_i_mayki/mujskie_futbolki/156784480299/?scId=19844590299']");
+    By basicShirtLocator = By.xpath("//A[@id = 'p_19844590299_link']/DIV[1]/IMG[1]");
     By assertBasicShirtLocator = By.xpath("//SPAN[contains(text(), 'MT6S14')]");
 
     public void setBasicShirtLocator()  {
