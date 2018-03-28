@@ -24,6 +24,7 @@ public class MainPage {
     By searchButtonLocator = By.xpath("//A[@class = 'new_ostin_head__search-icon']");
     By searchLineLocator = By.xpath("//INPUT[@id = 'atg_store_searchInput']");
     By searchBasicShirtLocator = By.xpath("//LI[1]/A[child::SPAN[contains(text(), 'базовая футболка')]]");
+    By menListLocator = By.xpath("*//LI[@class = 'header-menu-item main-menu2']/A[node() = ' Мужчины ']");
 
 
 
