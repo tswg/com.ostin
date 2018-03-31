@@ -24,7 +24,8 @@ public class MainPage {
     By searchButtonLocator = By.xpath("//A[@class = 'new_ostin_head__search-icon']");
     By searchLineLocator = By.xpath("//INPUT[@id = 'atg_store_searchInput']");
     By searchBasicShirtLocator = By.xpath("//LI[1]/A[child::SPAN[contains(text(), 'базовая футболка')]]");
-    By menListLocator = By.xpath("*//LI[@class = 'header-menu-item main-menu2']/A[node() = ' Мужчины ']");
+    By menListLocator = By.xpath("//LI[@id = 'cat_rootManClothes']");
+    By shirtListLocator = By.xpath("//A[node() = 'Рубашки']");
 
 
 
@@ -81,5 +82,13 @@ public class MainPage {
         search.sendKeys(searchElement);
         driver.findElement(searchBasicShirtLocator).click();
         System.out.println("-нашел в строке поиска Базовую футболку для мужчин");
+    }
+    public void clickMenList()  {
+        driver.findElement(menListLocator).click();
+        System.out.println("-кликнул на (мужчины)");
+    }
+    public void clickShirtList()    {
+        driver.findElement(shirtListLocator).click();
+        System.out.println("-кликнул на (рубашки)");
     }
 }
