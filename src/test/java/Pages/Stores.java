@@ -1,12 +1,13 @@
 package Pages;
 
+import Settings.ChromeSettings;
 import Tests.MyCabinetTests;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class Stores extends MyCabinetTests {
+public class Stores extends ChromeSettings {
     protected WebDriver driver;
 
     public Stores(WebDriver driver) {
