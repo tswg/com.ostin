@@ -21,7 +21,7 @@ public class MyCabinetTests extends ChromeSettings{
         new MyOrders(driver).assertMyOrders();
         new Subscriptions(driver).assertMySubscriptions();
         new ClubCard(driver).assertMyInfoClub();
-        System.out.println("test seccessful");
+        System.out.println("test successful");
     }
     @Test
     public void saveMyProfileInfo() {

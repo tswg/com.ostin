@@ -9,7 +9,7 @@ public class SearchAddressTest extends ChromeSettings {
 
     @Test
     public void searchAddressTest1() throws InterruptedException {
-        System.out.println("Test search ahop address start");
+        System.out.println("Test search shop address start");
         new MainPage(driver).townPopUpClose();
         Stores store = new Stores(driver);
         store.assertStoresAddress();
